@@ -1,0 +1,50 @@
+<div>
+  <p>Child Component</p>
+
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>
+        Name:
+        <input
+          type="text"
+          name="name"
+          formControlName="name"
+          placeholder="Your name"
+        />
+        <div *ngIf="f.name.errors" class="invalid-feedback">
+          <div *ngIf="f.name?.errors?.required">Name is required</div>
+        </div>
+      </label>
+    </div>
+    <div>
+      <label>
+        Email:
+        <input
+          type="text"
+          name="email"
+          formControlName="email"
+          placeholder="Your email"
+        />
+        <div *ngIf="f.email.errors" class="invalid-feedback">
+          <div *ngIf="f.email?.errors?.required">Email is required</div>
+        </div>
+      </label>
+    </div>
+    <div>
+      <label>
+        Message:
+        <input
+          type="text"
+          name="message"
+          formControlName="message"
+          placeholder="Your message"
+        />
+        <div *ngIf="f.message.errors" class="invalid-feedback">
+          <div *ngIf="f.message?.errors?.required">Message is required</div>
+        </div>
+      </label>
+    </div>
+    <br/>
+    <!-- <button type="submit">Send</button> -->
+  </form>
+</div>

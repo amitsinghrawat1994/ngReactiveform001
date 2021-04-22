@@ -1,0 +1,12 @@
+<div>
+  <hr />
+  <app-child [info]="contactInfo" (infoChange)="onInfoChange($event)"></app-child>
+  <hr />
+  <p>Parent component</p>
+  <button type="button" (click)="onClean()">Clean Field</button>
+  <p>Contact Info</p>
+  <pre>
+      {{contactInfo | json}}
+    </pre>
+  <hr />
+</div>
